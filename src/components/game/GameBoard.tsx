@@ -1,3 +1,5 @@
+import { cn } from '@/lib/utils'
+
 interface GameBoardProps {
   gridSize: number
   playerPos: { x: number; y: number }
@@ -29,21 +31,18 @@ export function GameBoard({
           return (
             <div
               key={index}
-              className={`
-                aspect-square transition-all duration-100
-                ${blocked ? 'bg-[#8B1538]' : 'border-[2px] border-black'}
-                ${
-                  !blocked && isPlayer
-                    ? 'bg-gradient-to-br from-blue-400 to-blue-600'
-                    : ''
-                }
-                ${
-                  !blocked && isTarget
-                    ? 'bg-gradient-to-br from-yellow-300 to-yellow-500'
-                    : ''
-                }
-                ${!blocked && !isPlayer && !isTarget ? 'bg-white' : ''}
-              `}
+              className={cn(
+                'aspect-square transition-all duration-100',
+                blocked && 'bg-[#8B1538]',
+                !blocked && 'border-[2px] border-black',
+                !blocked &&
+                  isPlayer &&
+                  'bg-gradient-to-br from-blue-400 to-blue-600',
+                !blocked &&
+                  isTarget &&
+                  'bg-gradient-to-br from-yellow-300 to-yellow-500',
+                !blocked && !isPlayer && !isTarget && 'bg-white'
+              )}
             />
           )
         })}
