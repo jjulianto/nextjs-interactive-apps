@@ -2,7 +2,7 @@
 
 A collection of modern and interactive web applications featuring a tile-matching game and responsive landing pages, built with Next.js and modern web technologies.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -12,7 +12,7 @@ A collection of modern and interactive web applications featuring a tile-matchin
 - [Author](#author)
 - [Additional Information](#additional-information)
 
-## 🛠️ Built With
+## Built With
 
 - **[Next.js](https://nextjs.org)** - The React Framework for Production
 - **[React](https://react.dev)** - JavaScript library for building user interfaces
@@ -20,7 +20,7 @@ A collection of modern and interactive web applications featuring a tile-matchin
 - **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
 - **[Shadcn/ui](https://ui.shadcn.com)** - Re-usable components built with Radix UI and Tailwind CSS
 
-## 🚀 Getting Started
+## Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
@@ -131,10 +131,10 @@ The application will be available at [http://localhost:3000](http://localhost:30
    yarn start
    ```
 
-## 👤 Author
+## Author
 
 **Julianto** - [GitHub](https://github.com/jjulianto)
 
-## 📚 Additional Information
+## Additional Information
 
 **Live Demo**: [Coming Soon]
