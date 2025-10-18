@@ -83,6 +83,12 @@ export default function GamePage() {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!isGameStarted || isGameOver) return
 
+      if (
+        !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)
+      ) {
+        return
+      }
+
       e.preventDefault()
 
       setPlayerPos((prev) => {
@@ -190,12 +196,13 @@ export default function GamePage() {
         <div className='flex-shrink-0 pb-12 pt-4 flex flex-col items-center gap-4'>
           <button
             onClick={() => move('up')}
-            className='bg-[#808080] hover:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
+            className='bg-[#808080] hover:bg-red-600 focus:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
             disabled={!isGameStarted || isGameOver}
             aria-label='Move up'
+            tabIndex={0}
           >
             <svg
-              className='w-4 h-4'
+              className='w-4 h-4 pointer-events-none'
               fill='none'
               stroke='currentColor'
               viewBox='0 0 24 24'
@@ -211,12 +218,13 @@ export default function GamePage() {
           <div className='flex gap-24 items-center'>
             <button
               onClick={() => move('left')}
-              className='bg-[#808080] hover:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
+              className='bg-[#808080] hover:bg-red-600 focus:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
               disabled={!isGameStarted || isGameOver}
               aria-label='Move left'
+              tabIndex={0}
             >
               <svg
-                className='w-4 h-4'
+                className='w-4 h-4 pointer-events-none'
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'
@@ -231,12 +239,13 @@ export default function GamePage() {
             </button>
             <button
               onClick={() => move('right')}
-              className='bg-[#808080] hover:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
+              className='bg-[#808080] hover:bg-red-600 focus:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
               disabled={!isGameStarted || isGameOver}
               aria-label='Move right'
+              tabIndex={0}
             >
               <svg
-                className='w-4 h-4'
+                className='w-4 h-4 pointer-events-none'
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'
@@ -253,12 +262,13 @@ export default function GamePage() {
           <div className='flex justify-center'>
             <button
               onClick={() => move('down')}
-              className='bg-[#808080] hover:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
+              className='bg-[#808080] hover:bg-red-600 focus:bg-red-600 active:bg-red-600 text-white py-3 px-6 rounded-lg flex items-center justify-center transition-all border-b-[4px] border-black/20 shadow-[0_6px_8px_rgba(0,0,0,0.25)] active:shadow-[0_2px_4px_rgba(0,0,0,0.2)] active:translate-y-[2px] disabled:opacity-30 disabled:cursor-not-allowed disabled:active:translate-y-0 cursor-pointer'
               disabled={!isGameStarted || isGameOver}
               aria-label='Move down'
+              tabIndex={0}
             >
               <svg
-                className='w-4 h-4'
+                className='w-4 h-4 pointer-events-none'
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'
