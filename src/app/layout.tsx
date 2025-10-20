@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { clsx } from 'clsx'
+import { trebuchet } from '@/styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='antialiased'>{children}</body>
+      <body className={clsx(`${trebuchet.variable} antialiased`)}>
+        {children}
+      </body>
     </html>
   )
 }
