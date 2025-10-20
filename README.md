@@ -137,4 +137,4 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 ## Additional Information
 
-**Live Demo**: [Coming Soon]
+**Live Demo**: [https://antikode-test-interactive-apps.netlify.app/](https://antikode-test-interactive-apps.netlify.app/)
