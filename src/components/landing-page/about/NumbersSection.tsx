@@ -3,7 +3,10 @@ import Link from 'next/link'
 
 export default function NumbersSection() {
   return (
-    <section className='relative bg-gradient-to-b from-[#F5F5F5] to-white py-16 md:pt-[100px] md:pb-30'>
+    <section
+      id='numbers'
+      className='relative bg-gradient-to-b from-[#F5F5F5] to-white py-16 md:pt-[100px] md:pb-30'
+    >
       <div className='pl-6 md:pl-16 xl:pl-[223px] pr-6 md:pr-16 xl:pr-[120px]'>
         <h2 className='text-3xl md:text-[42px] md:leading-14 mb-8 md:mb-10'>
           Daya Dimensi In Numbers

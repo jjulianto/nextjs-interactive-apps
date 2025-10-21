@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0 })
   }
 
   return (

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const activities = [
   {
@@ -49,7 +50,7 @@ export function UpcomingActivitiesSection() {
           </a>
         </div>
         <div className='relative flex flex-col lg:flex-row items-start gap-8 lg:gap-16 w-full'>
-          <div className='hidden lg:block absolute -top-0 left-0 right-0 h-px bg-[#F2F2F2]'></div>
+          <div className='hidden lg:block absolute top-0 left-0 right-0 h-px bg-[#F2F2F2]'></div>
           <div className='w-full lg:w-[40%]'>
             <Image
               src='/homepage/webinar.png'
@@ -61,37 +62,36 @@ export function UpcomingActivitiesSection() {
           </div>
           <div className='w-full lg:w-[60%] space-y-0'>
             {activities.map((activity, index) => (
-              <div
-                key={index}
-                className='flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 pt-4 md:pt-6 pb-6 md:pb-10 border-b border-[#F2F2F2] last:border-b-0 hover:bg-gray-50 -mx-3 px-3 rounded cursor-pointer transition'
-              >
-                <div className='flex-shrink-0 font-trebuchet w-full sm:w-32'>
-                  <div className='text-xs md:text-sm text-[#8B0B04] uppercase mb-1 md:mb-2 font-semibold'>
-                    {activity.tag}
+              <Link key={index} href='#'>
+                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 pt-4 md:pt-6 pb-6 md:pb-10 border-b border-[#F2F2F2] last:border-b-0 hover:bg-gray-50 -mx-3 px-3 rounded transition'>
+                  <div className='shrink-0 font-trebuchet w-full sm:w-32'>
+                    <div className='text-xs md:text-sm text-[#8B0B04] uppercase mb-1 md:mb-2 font-semibold'>
+                      {activity.tag}
+                    </div>
+                    <div className='text-xs text-black/40'>{activity.date}</div>
                   </div>
-                  <div className='text-xs text-black/40'>{activity.date}</div>
+                  <div className='flex-1'>
+                    <h4 className='text-lg md:text-xl lg:text-2xl font-medium leading-snug'>
+                      {activity.title}
+                    </h4>
+                  </div>
+                  <div className='shrink-0 self-start sm:self-center'>
+                    <svg
+                      width='20'
+                      height='20'
+                      viewBox='0 0 20 20'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path d='M2.5 10H17.5' stroke='#B92322' />
+                      <path
+                        d='M14.1667 7.5L17.5 10L14.1667 12.5'
+                        stroke='#B92322'
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <div className='flex-1'>
-                  <h4 className='text-lg md:text-xl lg:text-2xl font-medium leading-snug'>
-                    {activity.title}
-                  </h4>
-                </div>
-                <div className='flex-shrink-0 self-start sm:self-center'>
-                  <svg
-                    width='20'
-                    height='20'
-                    viewBox='0 0 20 20'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path d='M2.5 10H17.5' stroke='#B92322' />
-                    <path
-                      d='M14.1667 7.5L17.5 10L14.1667 12.5'
-                      stroke='#B92322'
-                    />
-                  </svg>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
