@@ -17,7 +17,7 @@ export function CTASection() {
         <Button
           asChild
           variant='link'
-          className='inline-flex items-center gap-2 text-sm md:text-base font-bold uppercase hover:opacity-80 text-white p-0 h-auto'
+          className='inline-flex items-center gap-2 text-sm md:text-base font-bold uppercase hover:opacity-80 text-white p-0 h-auto has-[>svg]:px-0'
         >
           <a href='#'>
             Learn More
