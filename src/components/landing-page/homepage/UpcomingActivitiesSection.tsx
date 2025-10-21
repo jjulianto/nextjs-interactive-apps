@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 const activities = [
   {
@@ -62,7 +61,7 @@ export function UpcomingActivitiesSection() {
           </div>
           <div className='w-full lg:w-[60%] space-y-0'>
             {activities.map((activity, index) => (
-              <Link key={index} href='#'>
+              <a key={index} href='#'>
                 <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 pt-4 md:pt-6 pb-6 md:pb-10 border-b border-[#F2F2F2] last:border-b-0 hover:bg-gray-50 -mx-3 px-3 rounded transition'>
                   <div className='shrink-0 font-trebuchet w-full sm:w-32'>
                     <div className='text-xs md:text-sm text-[#8B0B04] uppercase mb-1 md:mb-2 font-semibold'>
@@ -91,7 +90,7 @@ export function UpcomingActivitiesSection() {
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

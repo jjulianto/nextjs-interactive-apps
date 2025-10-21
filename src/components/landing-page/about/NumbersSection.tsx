@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function NumbersSection() {
   return (
@@ -80,7 +79,7 @@ export default function NumbersSection() {
               and leadership solutions. Therefore, we strive to grow our digital
               solutions to better cater your needs.
             </p>
-            <Link
+            <a
               href='#'
               className='text-[#B92322] font-bold text-sm md:text-base inline-flex items-center gap-2 hover:underline uppercase'
             >
@@ -95,7 +94,7 @@ export default function NumbersSection() {
                 <path d='M2.5 10H17.5' stroke='#B92322' />
                 <path d='M14.1666 7.5L17.5 10L14.1666 12.5' stroke='#B92322' />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

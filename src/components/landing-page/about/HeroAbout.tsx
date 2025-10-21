@@ -93,7 +93,7 @@ export default function HeroAbout() {
               assessment centre, selection, learning, and personal &
               organisational transformation.
             </p>
-            <Link href='#numbers' className='inline-block'>
+            <a href='#numbers' className='inline-block'>
               <svg
                 width='24'
                 height='24'
@@ -105,7 +105,7 @@ export default function HeroAbout() {
                 <path d='M12 3L12 21' stroke='white' />
                 <path d='M15 17L12 21L9 17' stroke='white' />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

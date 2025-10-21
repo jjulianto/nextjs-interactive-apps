@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import clsx from 'clsx'
 
 interface TeamCard {
@@ -62,7 +61,7 @@ export default function OrganizationalStructure() {
               )}
               {card.linkText && (
                 <div>
-                  <Link
+                  <a
                     href='#'
                     className='inline-flex items-center gap-2 text-white text-sm md:text-base font-bold hover:opacity-70 transition-opacity group'
                   >
@@ -80,7 +79,7 @@ export default function OrganizationalStructure() {
                         stroke='currentColor'
                       />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>

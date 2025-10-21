@@ -1,36 +1,31 @@
-'use client'
-
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
 export function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0 })
-  }
-
   return (
     <>
       <footer className='relative bg-[#2F2A2A] text-white pt-[50px]'>
-        <Button
-          onClick={scrollToTop}
-          className='absolute -top-8 right-6 md:right-16 lg:right-[120px] bg-[#B92322] hover:bg-[#a01b1a] text-white rounded-full w-14 h-14 p-0 backdrop-blur-sm z-10 cursor-pointer'
-          aria-label='Scroll to top'
-        >
-          <svg
-            width='28'
-            height='28'
-            viewBox='0 0 28 28'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
+        <a href='#'>
+          <Button
+            className='absolute -top-8 right-6 md:right-16 lg:right-[120px] bg-[#B92322] hover:bg-[#a01b1a] text-white rounded-full w-14 h-14 p-0 backdrop-blur-sm z-10 cursor-pointer'
+            aria-label='Scroll to top'
           >
-            <path d='M14 24.5L14 3.5' stroke='white' strokeWidth='2' />
-            <path
-              d='M10.5 8.16663L14 3.49996L17.5 8.16663'
-              stroke='white'
-              strokeWidth='2'
-            />
-          </svg>
-        </Button>
+            <svg
+              width='28'
+              height='28'
+              viewBox='0 0 28 28'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path d='M14 24.5L14 3.5' stroke='white' strokeWidth='2' />
+              <path
+                d='M10.5 8.16663L14 3.49996L17.5 8.16663'
+                stroke='white'
+                strokeWidth='2'
+              />
+            </svg>
+          </Button>
+        </a>
         <div className='mx-auto px-6 md:px-16 xl:px-[120px]'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-14'>
             <div className='flex items-start gap-6'>

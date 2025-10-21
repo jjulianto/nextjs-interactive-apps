@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import clsx from 'clsx'
 import { CSSProperties } from 'react'
-import Link from 'next/link'
 
 const expertiseData = [
   {
@@ -53,7 +52,7 @@ export function ExpertiseSection() {
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
           {expertiseData.map((item, index) => (
-            <Link key={index} href='#'>
+            <a key={index} href='#'>
               <Card
                 className={clsx(
                   'relative text-white p-6 md:p-8 flex flex-col justify-between group overflow-hidden h-full min-h-[320px] md:min-h-[379px] border-0 rounded-none shadow-none',
@@ -103,7 +102,7 @@ export function ExpertiseSection() {
                   </svg>
                 </div>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
